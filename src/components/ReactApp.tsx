@@ -1,12 +1,10 @@
 import * as React from "react";
-import {} from "linaria";
-import { styled } from "linaria/react";
-import { Container } from "./Container.tsx"; // TODO [RM]: another bug causes need for .tsx here
+import { CenteringContainer } from "./CenteringContainer";
 
 export const ReactApp: React.SFC<{}> = ({}) => {
     return (
-        <Container backgroundColor="papayawhip">
+        <CenteringContainer>
             <h1>Hello!</h1>
-        </Container>
+        </CenteringContainer>
     );
 };
