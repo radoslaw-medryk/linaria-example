@@ -3,20 +3,21 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = env => {
     return {
         mode: "development",
-        entry: "./src/index.tsx",
+        entry: "./src/index.jsx",
         output: {
             filename: "[name].js",
             path: __dirname + "/dist"
         },
         
         resolve: {
-            extensions: [".ts", ".tsx", ".js", ".json"]
+            extensions: [".jsx", ".js", ".json"]
         },
 
         module: {
             rules: [
                 {
-                    test: /\.tsx?$/,
+                    test: /\.jsx?$/,
+                    exclude: /node_modules/,
                     use: [
                         "babel-loader",
                         "linaria/loader"
