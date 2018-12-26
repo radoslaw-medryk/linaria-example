@@ -1,10 +1,12 @@
 import * as React from "react";
-import { CenteringContainer } from "./CenteringContainer";
+import { BorderedColorBox } from "./BorderedColorBox";
 
 export const ReactApp: React.SFC<{}> = ({}) => {
     return (
-        <CenteringContainer>
-            <h1>Hello!</h1>
-        </CenteringContainer>
+        <BorderedColorBox
+            backgroundColor="orange"
+            borderColor="green"
+            aria-label="colorful box"
+        />
     );
 };
